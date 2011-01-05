@@ -1,17 +1,16 @@
 package org.jboss.test.isolation;
 
-import javax.ejb.Stateless;
-import javax.ejb.TransactionAttribute;
 import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
+import javax.persistence.Persistence;
 
 /**
  * @author Emmanuel Bernard
+ * @author Ales Justin
  */
-@Stateless @TransactionAttribute
+// @Stateless @TransactionAttribute
 public class UserManager {
-	@PersistenceContext
-	EntityManager em;
+	//@PersistenceContext
+	EntityManager em = Persistence.createEntityManagerFactory("pu").createEntityManager();
 
 	public void saveUser(User user) {
 		em.persist( user );

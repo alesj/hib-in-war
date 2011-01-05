@@ -1,19 +1,20 @@
 package org.jboss.test.isolation;
 
-import java.io.IOException;
-import java.io.PrintWriter;
-import javax.inject.Inject;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import java.io.IOException;
+import java.io.PrintWriter;
+
 /**
  * @author Emmanuel Bernard
+ * @author Ales Justin
  */
-public class IncomingServlet extends HttpServlet {
-	@Inject
-	UserManager manager;
+public class   IncomingServlet extends HttpServlet {
+	//@Inject
+	UserManager manager = new UserManager();
 
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws IOException, ServletException {
