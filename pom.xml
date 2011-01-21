@@ -9,6 +9,11 @@
     <url>http://maven.apache.org</url>
     <dependencies>
         <dependency>
+            <groupId>javassist</groupId>
+            <artifactId>javassist</artifactId>
+           <version>3.12.1.GA</version>
+        </dependency>
+        <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-validator-legacy</artifactId>
             <version>4.0.2.GA</version>
