@@ -1,20 +1,20 @@
 package org.jboss.test.isolation;
 
+import java.io.Serializable;
 import javax.ejb.Stateless;
 import javax.ejb.TransactionAttribute;
+import javax.ejb.TransactionAttributeType;
 import javax.enterprise.context.SessionScoped;
 import javax.persistence.EntityManager;
 import javax.persistence.Persistence;
 import javax.persistence.PersistenceContext;
-
-import java.io.Serializable;
 
 /**
  * @author Emmanuel Bernard
  * @author Ales Justin
  */
 @Stateless
-@TransactionAttribute
+@TransactionAttribute(TransactionAttributeType.REQUIRED)
 @SessionScoped
 public class UserManager implements Serializable {
 
