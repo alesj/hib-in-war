@@ -15,7 +15,7 @@ import javax.persistence.PersistenceContext;
  */
 @Stateless
 @TransactionAttribute(TransactionAttributeType.REQUIRED)
-@SessionScoped
+// @SessionScoped
 public class UserManager implements Serializable {
 
    @PersistenceContext
