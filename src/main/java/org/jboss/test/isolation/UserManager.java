@@ -4,7 +4,6 @@ import java.io.Serializable;
 import javax.ejb.Stateless;
 import javax.ejb.TransactionAttribute;
 import javax.ejb.TransactionAttributeType;
-import javax.enterprise.context.SessionScoped;
 import javax.persistence.EntityManager;
 import javax.persistence.Persistence;
 import javax.persistence.PersistenceContext;
@@ -15,7 +14,6 @@ import javax.persistence.PersistenceContext;
  */
 @Stateless
 @TransactionAttribute(TransactionAttributeType.REQUIRED)
-// @SessionScoped
 public class UserManager implements Serializable {
 
    @PersistenceContext
