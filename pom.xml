@@ -12,6 +12,7 @@
             <groupId>javassist</groupId>
             <artifactId>javassist</artifactId>
            <version>3.12.1.GA</version>
+           <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.hibernate</groupId>
@@ -32,6 +33,7 @@
                   <artifactId>hibernate-commons-annotations</artifactId>
                </exclusion>
             </exclusions>
+            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.hibernate</groupId>
@@ -52,6 +54,7 @@
                   <artifactId>jaxb-impl</artifactId>
                </exclusion>
             </exclusions>
+            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.hibernate</groupId>
@@ -68,6 +71,7 @@
                   <artifactId>xml-apis</artifactId>
                </exclusion>
             </exclusions>
+            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>javax</groupId>

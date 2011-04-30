@@ -1,8 +1,11 @@
 package org.jboss.test.isolation;
 
+import javax.ejb.Stateless;
+import javax.ejb.TransactionAttribute;
 import javax.enterprise.context.SessionScoped;
 import javax.persistence.EntityManager;
 import javax.persistence.Persistence;
+import javax.persistence.PersistenceContext;
 
 import java.io.Serializable;
 
@@ -10,10 +13,12 @@ import java.io.Serializable;
  * @author Emmanuel Bernard
  * @author Ales Justin
  */
-// @Stateless @TransactionAttribute
+@Stateless
+@TransactionAttribute
 @SessionScoped
 public class UserManager implements Serializable {
-	//@PersistenceContext
+
+   @PersistenceContext
 	private transient EntityManager em;
 
    private synchronized EntityManager getEM()
