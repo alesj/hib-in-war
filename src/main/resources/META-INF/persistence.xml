@@ -7,7 +7,7 @@
     version="1.0">
     <persistence-unit name="pu" transaction-type="JTA">
         <provider>org.hibernate.ejb.HibernatePersistence</provider>
-        <jta-data-source>java:/H2DS</jta-data-source>
+        <jta-data-source>java:jboss/datasources/ExampleDS</jta-data-source>
         <class>org.jboss.test.isolation.User</class>
         <properties>
             <property name="hibernate.show_sql" value="true"/>
